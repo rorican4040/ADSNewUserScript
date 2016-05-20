@@ -12,7 +12,7 @@
 function OnApplicationLoad {
 $CreateXML = @"
 <?xml version="1.0" standalone="no"?>
-<OPTIONS Product="Arposh New User Creation" Version="1.2">
+<OPTIONS Product="ADS New User Creation" Version="1.2">
  <Settings>
   <sAMAccountName Generate="True">
    <Style Format="FirstName.LastName" Enabled="True" />
@@ -32,35 +32,35 @@ $CreateXML = @"
   <Password ChangeAtLogon="True" />
  </Settings>
  <Default>
-  <Domain>RU.lab</Domain>
-  <Path>OU=MyOU,DC=ru,DC=lab</Path>
+  <Domain>ads-pipe.com</Domain>
+  <Path>OU=ADS Hierachy,OU=Users,DC=ads-pipe,DC=com</Path>
   <FirstName></FirstName>
   <LastName></LastName>
   <Office></Office>
   <Title></Title>
-  <Description>Full-Time Employee</Description>
+  <Description>ADS Employee</Description>
   <Department>IT</Department>
-  <Company>Arposh</Company>
-  <Phone>212-555-1000</Phone>
-  <Site>NY</Site>
-  <StreetAddress>100 Main Street</StreetAddress>
-  <City>New York</City>
-  <State>NY</State>
-  <PostalCode>10001</PostalCode>
-  <Password>P@ssw0rd</Password>
+  <Company>Advanced Drainage Systems</Company>
+  <Phone></Phone>
+  <Site></Site>
+  <StreetAddress></StreetAddress>
+  <City></City>
+  <State></State>
+  <PostalCode></PostalCode>
+  <Password></Password>
  </Default>
  <Locations>
-  <Location Site="NY">
-   <StreetAddress>1 Main Street</StreetAddress>
-   <City>New York</City>
-   <State>NY</State>
-   <PostalCode>10001</PostalCode>
+  <Location Site=>
+   <StreetAddress></StreetAddress>
+   <City></City>
+   <State></State>
+   <PostalCode></PostalCode>
   </Location>
-  <Location Site="NJ">
-   <StreetAddress>2 Main Street</StreetAddress>
-   <City>Edison</City>
-   <State>NJ</State>
-   <PostalCode>22222</PostalCode>
+  <Location Site=>
+   <StreetAddress></StreetAddress>
+   <City></City>
+   <State></State>
+   <PostalCode></PostalCode>
   </Location>
   <Location Site="Custom">
    <StreetAddress></StreetAddress>
@@ -70,24 +70,33 @@ $CreateXML = @"
   </Location>
  </Locations>
  <Domains>
-  <Domain Name="RU.lab">
-   <Path>OU=MyOU,DC=ru,DC=lab</Path>
-   <Path>CN=Users,DC=ru,DC=lab</Path>
+  <Domain Name="ads-pipe.com">
+   <Path>OU=ADS Hierarchy,DC=ads-pipe,DC=com</Path>
+   <Path>CN=Users,DC=ads-pipe,DC=com</Path>
   </Domain>
-  <Domain Name="RP.lab">
-   <Path>OU=RPUsers1,DC=rp,DC=lab</Path>
-   <Path>OU=RPUsers2,DC=rp,DC=lab</Path>
-   <Path>OU=RPUsers3,DC=rp,DC=lab</Path>
-  </Domain>
+  <Domain Name="ads-pipe.com">
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Corporate,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Customer Service,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=IT,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Others,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Plants,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Presentation Users,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Remote,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Templates,DC=ads-pipe,DC=com</Path>
+   <Path>OU=ADS Hierarchy,OU=Users,OU=Yards,DC=ads-pipe,DC=com</Path>
+   </Domain>
  </Domains>
  <Descriptions>
  <Description>Full-Time Employee</Description>
-  <Description>Part-Time Employee</Description>
+  <Description>Contractor</Description>
   <Description>Consultant</Description>
   <Description>Intern</Description>
-  <Description>Service Account</Description>
-  <Description>Temp</Description>
-  <Description>Freelancer</Description>
+  <Description>Corporate</Description>
+  <Description>Sales</Description>
+  <Description>HR</Description>
+  <Description>Customer Service</Description>
+  <Description>Help Desk</Description>
+  <Description>Development</Description>
  </Descriptions>
  <Departments>
   <Department>Finance</Department>
