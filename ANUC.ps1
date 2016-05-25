@@ -15,8 +15,8 @@ $CreateXML = @"
 <OPTIONS Product="ADS New User Creation" Version="1.2">
  <Settings>
   <sAMAccountName Generate="True">
-   <Style Format="FirstName.LastName" Enabled="True" />
-   <Style Format="FirstInitialLastName" Enabled="False" />
+   <Style Format="FirstName.LastName" Enabled="False" />
+   <Style Format="FirstInitialLastName" Enabled="True" />
    <Style Format="LastNameFirstInitial" Enabled="False" />
   </sAMAccountName>
   <UPN Generate="True">
@@ -51,15 +51,15 @@ $CreateXML = @"
  </Default>
  <Locations>
   <Location Site=>
-   <StreetAddress></StreetAddress>
-   <City></City>
-   <State></State>
-   <PostalCode></PostalCode>
+   <StreetAddress>4640 Trueman Blvd</StreetAddress>
+   <City>Hilliard</City>
+   <State>OH</State>
+   <PostalCode>43026</PostalCode>
   </Location>
   <Location Site=>
    <StreetAddress></StreetAddress>
-   <City></City>
-   <State></State>
+   <City>Findlay</City>
+   <State>OH</State>
    <PostalCode></PostalCode>
   </Location>
   <Location Site="Custom">
@@ -70,9 +70,9 @@ $CreateXML = @"
   </Location>
  </Locations>
  <Domains>
-  <Domain Name="ads-pipe.com">
-   <Path>OU=ADS Hierarchy,DC=ads-pipe,DC=com</Path>
-   <Path>CN=Users,DC=ads-pipe,DC=com</Path>
+  <Domain Name="ads-tigre.com">
+   <Path>DC=ads-tigre,DC=com</Path>
+   <Path>CN=Users,DC=ads-tigre,DC=com</Path>
   </Domain>
   <Domain Name="ads-pipe.com">
    <Path>OU=ADS Hierarchy,OU=Users,OU=Corporate,DC=ads-pipe,DC=com</Path>
